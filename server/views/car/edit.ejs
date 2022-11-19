@@ -1,0 +1,77 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+
+<!-- content for the edit page goes here -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="modelTextField">Car Model</label>
+                    <input type="text" class="form-control"
+                    id="modelTextField"
+                    name="model" 
+                    value="<%= car.model %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearTextField">Year</label>
+                    <input type="text" class="form-control"
+                    id="yearTextField"
+                    name="year" 
+                    value="<%= car.year %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="zerotosixtyTextField">Zero-To-Sixty</label>
+                    <input type="text" class="form-control"
+                    id="zerotosixtyTextField"
+                    name="zeroSixty" 
+                    value="<%= car.zeroSixty %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="topspeedTextField">Top-Speed</label>
+                    <input type="text" class="form-control"
+                    id="topspeedTextField"
+                    name="topSpeed" 
+                    value="<%= car.topSpeed %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descTextField">Description</label>
+                    <textarea type="text" class="form-control"
+                    id="descTextField"
+                    name="description" required>
+                    <%= car.description %>
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">Price</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    name="price" 
+                    value="<%= car.price %>"
+                    required>
+                </div>
+                    <br>
+                <button class="btn-btn-primary" type="submit">
+                    <i class="fas fa-check"></i>Submit</button>
+
+                <a href="/car-info" class="btn" style="background-color: #7c68ee;">
+                    <i class="fas fa-undo"></i>Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

@@ -1,0 +1,54 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Main -->
+<main style="background-color: #000000; width; 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <a href="/car-info/add" class="btn" style="background-color: #7c68ee;" role="button">
+                    <i class="fas fa-plus-circle"></i> Add a Car
+                </a>
+                <br>
+                <br>
+        <table class="table table-bordered" style="border-color: #7c68ee; color: white;">
+            <tr class="d-flex"> 
+                <th class="text-center col-1">Model</th>
+                <th class="text-center col-1">Year</th>
+                <th class="text-center col-1">ZeroSixty</th>
+                <th class="text-center col-1">TopSpeed</th>
+                <th class="text-center col-4">Description</th>
+                <th class="text-center col-2">Price</th>
+                <th class="text-center col-1">Edit</th>
+                <th class="text-center col-1">Remove</th>
+            </tr>
+            </thead>
+        <!-- repeat template -->
+        <% for(let count=0; count < CarInfo.length; count++) { %>
+            <tr class="d-flex">
+                <td class="text-center col-1"><%= CarInfo[count].model %></td>
+                <td class="text-center col-1"><%= CarInfo[count].year %></td>
+                <td class="text-center col-1"><%= CarInfo[count].zeroSixty %></td>
+                <td class="text-center col-1"><%= CarInfo[count].topSpeed %></td>
+                <td class="text-center col-4"><%= CarInfo[count].description %></td>
+                <td class="text-center col-2"><%= CarInfo[count].price %></td>
+                <td class="text-center col-1">
+                    <a href="/car-info/edit/<%= CarInfo[count]._id %>"
+                        class="btn btn-primary">
+                        <i class="fas fa-pen-to-square"></i></a>
+                </td>
+                <td class="text-center col-1">
+                    <a href="/car-info/delete/<%= CarInfo[count]._id %>"
+                        class="btn btn-danger">
+                        <i class="fa-solid fa-xmark"></i></a>
+                </td>
+            </tr>
+        <% } %>
+        </table>
+    </div>    
+    </div>
+    </div>
+</main>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

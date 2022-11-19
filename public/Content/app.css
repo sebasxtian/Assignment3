@@ -1,0 +1,80 @@
+/* css goes here */
+@charset "UTF-8";
+
+/* Nav-bar */
+/* top left 'Nissan' */
+.navbar-brand.mb-xlg{
+    font-family: 'Ms Madi', cursive;
+    color: white;
+}
+/* top right symbols */
+.fa-solid.fa-lg.fa-house-user{
+    color: white;
+}
+.fa-solid.fa-lg.fa-car{
+    color: white;
+}
+.fa-solid.fa-wrench{
+    color: #ffffff;
+}
+/* -------------------------------- */
+
+
+/* Home page */
+/* wrapper color */
+#HWrapper{
+    height: 980px;
+    background-color: black;
+}
+/* Body msg */
+.homeText{
+    text-align: center;
+    color: white;
+}
+/* centering the img */
+.imgCenter{
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    height: auto;
+}
+/* -------------------------------- */
+
+
+/* Cars Page *?
+/* main list */
+
+.container{
+    color: white;
+    height: 980px;
+}
+
+
+
+
+
+
+
+
+/* -------------------------------- */
+
+
+/* Bottom Nav-bar */
+/* bottom left img */
+.rounded-pill{
+    margin-left: 10px;
+}
+/* my github */
+.gitLink{
+    font-family: 'Ms Madi', cursive;
+    font-size: xx-large;
+    margin-left: 5px;
+    color: white;
+}
+/* copyright */
+.navbar-text.ms-auto{
+    font-size: large;
+    margin-right: 5px;
+}
